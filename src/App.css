@@ -1,33 +1,105 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+  background-color: aqua;
+  overflow-y: inherit;
+  overflow: hidden;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: url('./img/bg1.jpg');
+  background-blend-mode: darken;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
 }
 
-.App-link {
-  color: #61dafb;
+.App-logo {
+  width: 25vmax;
+  position: relative;
+  top: 20vh;
+  left: 13vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nes-balloon {
+  position: relative;
+  left: 15vw;
+  top: 20vh;
+  font-size: 1vw;
+  width: 40vw;
+  white-space: wrap;
+  /* background-color: #A99FE6;
+  color:#e6c79f; */
+  background-color: #A99FE6;
+  color:black;
+
+}
+
+.nes-balloon.from-right::after, .nes-balloon.from-right::before {
+  background-color: #A99FE6;
+  box-shadow: -4px 0, 4px 0, 4px 4px #A99FE6, 0 4px, 8px 4px, 4px 8px, 8px 8px;
+}
+
+
+.nes-badge {
+  top: 5vh;
+  left: 3vw;
+
+}
+
+.bg2 {
+  display: block;
+  background-image: url('./img/bg2.jpg');
+  background-size: 100vw;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 45vh;
+}
+
+.bg3 {
+  display: block;
+  background-image: url('./img/bg3.jpg');
+  background-size: 100vw;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 45vh;
+}
+
+.my-work {
+  height:90vh;
+  background-color: black;
+}
+
+.about-me {
+  height:90vh;
+  display: block;
+  background-color: black;
+}
+
+.contact-me {
+  height:90vh;
+  background-color: black;
+}
+
+.footer {
+  height: 15vh;
+  text-align: center;
+  color: aqua;
+  background-color: blueviolet;
+}
+
+.nes-icon {
+  position: relative;
+  width: 6vw;
+  height: 5vh;
+  top: 1vh;
+  right:5vw;
+}
+
+.react-icon {
+  position: relative;
+  top: 2vh;
+  left: 2vw;
+  width: 8vw;
+  height: 8vh;
 }
