@@ -1,105 +1,414 @@
+/* Top level attributes*/
 .App {
-  background-color: aqua;
-  overflow-y: inherit;
   overflow: hidden;
 }
 
+/* Container style for header.jsx */
 .App-header {
-  background-image: url('./img/bg1.jpg');
-  background-blend-mode: darken;
-  background-size: cover;
   height: 100vh;
+  width: 100%;
+  padding-top: 200px;
+  background-image: url("./img/bg1.jpg");
   background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
-.App-logo {
-  width: 25vmax;
-  position: relative;
-  top: 20vh;
-  left: 13vw;
+/*Wrpper for nes-balloon and header-img*/
+.intro-container {
+  text-align: center;
 }
 
+/* Styles header image (header.jsx) */
+.header-img {
+  width: 325px;
+}
+
+/* Speech bubble (header.jsx) */
 .nes-balloon {
-  position: relative;
-  left: 15vw;
-  top: 20vh;
-  font-size: 1vw;
-  width: 40vw;
+  font-size: medium;
+  width: 700px;
   white-space: wrap;
-  /* background-color: #A99FE6;
-  color:#e6c79f; */
-  background-color: #A99FE6;
-  color:black;
-
+  background-color: #a99fe6;
+  color: black;
+  text-align: left;
 }
 
-.nes-balloon.from-right::after, .nes-balloon.from-right::before {
-  background-color: #A99FE6;
-  box-shadow: -4px 0, 4px 0, 4px 4px #A99FE6, 0 4px, 8px 4px, 4px 8px, 8px 8px;
+/* Annoying speech bubble tail (header.jsx) */
+.nes-balloon.from-right::after,
+.nes-balloon.from-right::before {
+  background-color: #a99fe6;
+  box-shadow: -4px 0, 4px 0, 4px 4px #a99fe6, 0 4px, 8px 4px, 4px 8px, 8px 8px;
 }
 
-
+/* Component banners (myWork.jsx, aboutMe.jsx, contactMe.jsx) */
 .nes-badge {
-  top: 5vh;
-  left: 3vw;
-
+  transition: all 2s;
+  width: 200px;
+  font-size: large;
+  margin-top: 20px;
 }
 
+.nes-badge span.is-error:first-child {
+  color: white;
+}
+
+.nes-badge.slide {
+  animation: badgeSlide 1s;
+}
+
+/* Style for myWork component (myWork.jsx) */
+.my-work {
+  background-color: black;
+  padding: 25px;
+}
+
+/* Slideshow styling */
+.swiper-container {
+  width: 426px;
+  height: 240px;
+}
+
+/*Slide styling*/
+.slide-container {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Container for experience table (myWork.jsx) */
+.nes-container.work-container {
+  background-color: #a99fe6;
+  display: inline-block;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/*Table Styling*/
+.exp-table {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: small;
+}
+
+.exp-cell {
+  display: flex;
+  color: #e76e55;
+  background-color: black;
+  border-style: solid;
+  border-width: thin;
+  border-color: #212529;
+  justify-content: center;
+  align-items: center;
+  min-width: 25%;
+  height: 95px;
+
+  flex: 1;
+}
+
+/* First background filler to provide parallax effect */
 .bg2 {
   display: block;
-  background-image: url('./img/bg2.jpg');
+  background-image: url("./img/bg2.jpg");
   background-size: 100vw;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 45vh;
+  height: 300px;
 }
 
-.bg3 {
-  display: block;
-  background-image: url('./img/bg3.jpg');
-  background-size: 100vw;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover; 
-  height: 45vh;
-}
-
-.my-work {
-  height:90vh;
-  background-color: black;
-}
-
+/* Style for aboutMe component (aboutMe.jsx) */
 .about-me {
-  height:90vh;
-  display: block;
+  height: 90vh;
+  padding: 25px;
   background-color: black;
 }
 
-.contact-me {
-  height:90vh;
-  background-color: black;
-}
-
-.footer {
-  height: 15vh;
+/* Container for aboutMe icons(aboutMe.jsx) */
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
-  color: aqua;
+}
+
+/* aboutMe icons (aboutMe.jsx) */
+.about-icon {
+  padding: 50px;
+  min-width: 25%;
+  height: 300px;
+  flex: 1;
+
+  transition: all 1s;
+}
+.about-icon:hover {
+  border-radius: 100%;
+}
+#basketball:hover {
+  background-color: orange;
+}
+
+#telescope:hover {
+  background-color: deepskyblue;
+}
+
+#motorcycle:hover {
+  background-color: green;
+}
+
+#data:hover {
   background-color: blueviolet;
 }
 
+/* Styling for dropdown container on aboutMe icons (aboutMe.jsx) */
+.info-container {
+  /* bottom: 0; */
+  margin-left: 12vw;
+  align-content: center;
+  text-align: center;
+  color: #e76e55;
+}
+
+/* Second background filler to provide parallax effect */
+.bg3 {
+  display: block;
+  background-image: url("./img/bg3.jpg");
+  background-size: 100vw;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 45vh;
+}
+
+/* Style for contactMe component (contactMe.jsx) */
+.contact-me {
+  height: 90vh;
+  padding: 25px;
+  background-color: black;
+}
+
+.contact-btn-container {
+  display: block;
+  margin-left: 30vw;
+}
+
+/* Styling for message button button (contactMe.jsx) */
+.message {
+  margin: 1vw;
+}
+
+.linked-in {
+  margin: 1vw;
+}
+
+.contact-img-container{
+  margin-left:200px;
+}
+.contact-img-container.slide {
+  animation: vertSlide 1s;
+}
+
+.contact-img {
+  width: 300px;
+  height:300px;
+  border-radius: 100%;
+}
+
+.contact-img.slide {
+  
+}
+
+/* Style for footer component (footer.jsx) */
+.footer {
+  height: 80px;
+  text-align: center;
+  color: black;
+  background-color: rgb(177, 109, 255);
+}
+
+/* nes.css icon in footer (footer.jsx) */
 .nes-icon {
   position: relative;
   width: 6vw;
-  height: 5vh;
+  height: 3vh;
   top: 1vh;
-  right:5vw;
+  right: 15vw;
 }
 
+/* react icon in footer (footer.jsx) */
 .react-icon {
   position: relative;
   top: 2vh;
-  left: 2vw;
-  width: 8vw;
-  height: 8vh;
+  right: 10vw;
+  width: 10vw;
+  height: 6vh;
+}
+
+/* Name, etc (footer.jsx) */
+.seal {
+  position: relative;
+  float: left;
+  top: 9vh;
+  font-size: 1.4vh;
+}
+
+/************************************Animations******************/
+/*Animation for badge slide*/
+@keyframes badgeSlide {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+
+@keyframes vertSlide {
+  from {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px);
+    opacity:1;
+  }
+}
+
+
+
+/************************************************************************************************/
+/*Mobile Configurations*/
+@media only screen and (max-width: 768px) {
+  .App-header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 150px;
+  }
+  .nes-balloon {
+    text-align: left;
+    border-width: thick;
+    font-size: smaller;
+    padding:10px;
+    width: 95vw;
+  }
+
+  .header-img {
+    width: 200px;
+  }
+
+  /* Slideshow styling */
+  .swiper-container {
+    width: 256px;
+    height: 140px;
+  }
+
+  .nes-badge {
+    transition: all 2s;
+    padding: 15px;
+    padding-bottom: 20px;
+    width: 125px;
+    font-size: small;
+  }
+
+  .nes-badge span.is-error:first-child {
+    color: black;
+  }
+
+  .my-work {
+    padding: 0;
+  }
+
+  .nes-container {
+    padding: 20px;
+    width: 100vw;
+  }
+
+  /* Container for experience table (myWork.jsx) */
+  .nes-container.work-container {
+    background-color: #a99fe6;
+    display: inline-block;
+    margin-top: 35px;
+    text-align: center;
+    margin-bottom: 25px;
+    width: 90vw;
+    margin-left: 5vw;
+  }
+
+  .nes-container.work-container.fade {
+    animation: fadeIn 1s;
+  }
+
+  .exp-cell {
+    min-width: 50%;
+    height: 110px;
+    padding: 25px;
+    font-size: smaller;
+  }
+
+  .about-me {
+    padding: 0;
+    padding-top: 15px;
+    height: 95vh;
+    background-color: black;
+  }
+
+  /* Container for aboutMe icons(aboutMe.jsx) */
+  .icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  /* aboutMe icons (aboutMe.jsx) */
+  .about-icon {
+    min-width: 50%;
+    height: 150px;
+    padding: 20px;
+    transition: all 1s;
+    display: flex;
+    flex: 1;
+  }
+
+  .nes-container.is-dark.info-container {
+    padding: 10px;
+    text-align: left;
+    width: 95vw;
+    margin-left: 2.5vw;
+    margin-top: 20px;
+  }
+
+  .bg2 {
+    height: 250px;
+  }
+  .bg3 {
+    height: 250px;
+  }
+
+  .contact-me {
+    padding: 0;
+  }
+
+  .contact-img {
+    width: 200px;
+  }
+
+  .footer {
+    font-size: 10px;
+    height: 200px;
+    padding: 2px;
+  }
+
+  .nes-icon{
+      width:30px;
+      height:20px;
+  }
+
+  .react-icon{
+      height: 30px;
+      width: 45px;
+  }
+
+  .seal {
+    width: 100%;
+    height: 100%;
+  }
 }

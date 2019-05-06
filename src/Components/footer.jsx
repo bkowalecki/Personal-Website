@@ -1,21 +1,20 @@
-import React, {Component} from 'react';
-import nesIcon from '../img/nes.png';
-import reactIcon from '../img/react.png';
+import React, { Component } from "react";
+import nesIcon from "../img/nes.png";
+import reactIcon from "../img/react.png";
+
 class Footer extends Component {
-
-
-    render() {
-        return(
-        
-                <div className="footer">
-                    This site is powered by:
-            <div>
-                <img src={nesIcon} className="nes-icon"></img>
-                <img src={reactIcon} className="react-icon"></img>
-            </div>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="footer">
+        <span>This site is powered by:</span>
+        <div>
+          <img src={nesIcon} alt="" className="nes-icon" />
+          <img src={reactIcon} alt="" className="react-icon" />
+          <span className="seal">Brandon Kowalecki</span>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Footer;
